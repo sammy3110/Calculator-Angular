@@ -8,6 +8,7 @@ import { DigitComponent } from './Components/digit/digit.component';
 import { OperatorComponent } from './Components/operator/operator.component';
 import { EqualComponent } from './Components/equal/equal.component';
 import { DisplayComponent } from './Components/display/display.component';
+import { SwitchComponent } from './Components/switch/switch.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,11 @@ import { DisplayComponent } from './Components/display/display.component';
     DigitComponent,
     OperatorComponent,
     EqualComponent,
-    DisplayComponent
+    DisplayComponent,
+    SwitchComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
