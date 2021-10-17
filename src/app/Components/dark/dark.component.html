@@ -8,203 +8,113 @@
     <div class="buttons">
       <div class="row">
         <app-operator
-          (operatorEmitter)="update($event)"
+          (operatorEmitter)="operatorClicked($event)"
           [type]="'dark'"
-          [display]="display"
-          [label]="label"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
           [operator]="'C'"
-          [operatorButton]="'C'"
         ></app-operator>
         <app-operator
-          (operatorEmitter)="update($event)"
+          (operatorEmitter)="operatorClicked($event)"
           [type]="'dark'"
-          [display]="display"
-          [label]="label"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
           [operator]="'+/-'"
-          [operatorButton]="'+/-'"
         ></app-operator>
 
         <app-operator
-          (operatorEmitter)="update($event)"
+          (operatorEmitter)="operatorClicked($event)"
           [type]="'dark'"
-          [display]="display"
-          [label]="label"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
           [operator]="'%'"
-          [operatorButton]="'%'"
         ></app-operator>
         <app-operator
-          (operatorEmitter)="update($event)"
+          (operatorEmitter)="operatorClicked($event)"
           [type]="'dark'"
-          [display]="display"
-          [label]="label"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
           [operator]="'/'"
-          [operatorButton]="'/'"
         ></app-operator>
       </div>
       <div class="row">
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'7'"
-          [operator]="operator"
-          [display]="display"
-          [label]="label"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'8'"
-          [display]="display"
-          [label]="label"
-          [operator]="operator"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'9'"
-          [display]="display"
-          [label]="label"
-          [operator]="operator"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
         <app-operator
-          (operatorEmitter)="update($event)"
+          (operatorEmitter)="operatorClicked($event)"
           [type]="'dark'"
-          [display]="display"
-          [label]="label"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
           [operator]="'X'"
-          [operatorButton]="'X'"
         ></app-operator>
       </div>
       <div class="row">
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'4'"
-          [display]="display"
-          [label]="label"
-          [operator]="operator"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'5'"
-          [display]="display"
-          [label]="label"
-          [operator]="operator"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'6'"
-          [display]="display"
-          [label]="label"
-          [operator]="operator"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
 
         <app-operator
-          (operatorEmitter)="update($event)"
+          (operatorEmitter)="operatorClicked($event)"
           [type]="'dark'"
-          [display]="display"
-          [label]="label"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
           [operator]="'-'"
-          [operatorButton]="'-'"
         ></app-operator>
       </div>
       <div class="row">
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'1'"
-          [display]="display"
-          [label]="label"
-          [operator]="operator"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'2'"
-          [display]="display"
-          [label]="label"
-          [operator]="operator"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'3'"
-          [display]="display"
-          [label]="label"
-          [operator]="operator"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
         <app-operator
-          (operatorEmitter)="update($event)"
+          (operatorEmitter)="operatorClicked($event)"
           [type]="'dark'"
-          [display]="display"
-          [label]="label"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
           [operator]="'+'"
-          [operatorButton]="'+'"
         ></app-operator>
       </div>
       <div class="row">
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'0'"
-          [display]="display"
-          [label]="label"
-          [operator]="operator"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
         <app-digit
           [type]="'dark'"
-          (digitEmitter)="update($event)"
+          (digitEmitter)="digitClicked($event)"
           [digit]="'.'"
-          [display]="display"
-          [label]="label"
-          [operator]="operator"
-          [var1]="var1"
-          [equalPressed]="equalPressed"
         ></app-digit>
         <button class="space-dark"></button>
         <app-equal
-          (equalEmitter)="update($event)"
           [display]="display"
           [label]="label"
           [operator]="operator"
-          [var1]="var1"
+          [firstOperand]="firstOperand"
           [equalPressed]="equalPressed"
+          (equalEmitter)="equalClicked($event)"
         ></app-equal>
       </div>
     </div>

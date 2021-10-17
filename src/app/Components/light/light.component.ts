@@ -1,4 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
+import { EqualComponent } from '../equal/equal.component';
+import { EqualData } from '../equal/equal.component';
 
 @Component({
   selector: 'app-light',
@@ -9,17 +18,39 @@ export class LightComponent implements OnInit {
   @Input() display = '0';
   @Input() label = '0';
   @Input() operator = '';
-  @Input() var1 = 0;
+  @Input() firstOperand = 0;
   @Input() equalPressed = false;
 
-  @Output() lightEmitter = new EventEmitter<any[]>();
+  @Output() lightOpEmitter = new EventEmitter<string>();
+  @Output() lightDigitEmitter = new EventEmitter<string>();
+  @Output() lightEqualDataEmitter = new EventEmitter<EqualData>();
+
+  @ViewChild(EqualComponent)
+  private equalComponent!: EqualComponent;
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  update(e: any) {
-    console.log(e);
-    this.lightEmitter.emit([e[0], e[1], e[2], e[3], e[4]]);
+  operatorClicked(e: string) {
+    this.lightOpEmitter.emit(e);
+  }
+  digitClicked(e: string) {
+    this.lightDigitEmitter.emit(e);
+  }
+
+  equalClicked(e: EqualData) {
+    this.lightEqualDataEmitter.emit(e);
+  }
+
+  callEqual(op: string, firstOperand: number) {
+    this.equalComponent.assignValues({
+      display: this.display,
+      label: this.label,
+      operator: this.operator,
+      firstOperand: firstOperand,
+      equalPressed: this.equalPressed,
+    });
+    this.equalComponent.equals(op);
   }
 }

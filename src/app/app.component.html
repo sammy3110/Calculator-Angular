@@ -4,16 +4,20 @@
     [display]="display"
     [label]="label"
     [operator]="operator"
-    [var1]="var1"
+    [firstOperand]="firstOperand"
     [equalPressed]="equalPressed"
-    (lightEmitter)="updateData($event)"
+    (lightOpEmitter)="operatorClicked($event)"
+    (lightDigitEmitter)="digitClicked($event)"
+    (lightEqualDataEmitter)="equalClicked($event)"
   ></app-light>
   <app-dark
     [display]="display"
     [label]="label"
     [operator]="operator"
-    [var1]="var1"
+    [firstOperand]="firstOperand"
     [equalPressed]="equalPressed"
-    (darkEmitter)="updateData($event)"
+    (darkOpEmitter)="operatorClicked($event)"
+    (darkDigitEmitter)="digitClicked($event)"
+    (darkEqualDataEmitter)="equalClicked($event)"
   ></app-dark>
 </div>

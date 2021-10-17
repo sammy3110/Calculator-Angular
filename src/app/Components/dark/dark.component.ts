@@ -1,4 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
+import { Event } from '@angular/router';
+import { EqualComponent, EqualData } from '../equal/equal.component';
 
 @Component({
   selector: 'app-dark',
@@ -9,17 +18,33 @@ export class DarkComponent implements OnInit {
   @Input() display = '0';
   @Input() label = '0';
   @Input() operator = '';
-  @Input() var1 = 0;
+  @Input() firstOperand = 0;
   @Input() equalPressed = false;
 
-  @Output() darkEmitter = new EventEmitter<any[]>();
+  @Output() darkOpEmitter = new EventEmitter<string>();
+  @Output() darkDigitEmitter = new EventEmitter<string>();
+  @Output() darkEqualDataEmitter = new EventEmitter<EqualData>();
+
+  @ViewChild(EqualComponent)
+  private equalComp!: EqualComponent;
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  update(e: any) {
-    console.log(e);
-    this.darkEmitter.emit([e[0], e[1], e[2], e[3], e[4]]);
+  digitClicked(e: string) {
+    this.darkDigitEmitter.emit(e);
+  }
+
+  operatorClicked(e: string) {
+    this.darkOpEmitter.emit(e);
+  }
+
+  equalClicked(e: EqualData) {
+    this.darkEqualDataEmitter.emit(e);
+  }
+
+  callEqual(op: string) {
+    this.equalComp.equals(op);
   }
 }
