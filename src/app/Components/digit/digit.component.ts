@@ -6,7 +6,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./digit.component.css'],
 })
 export class DigitComponent implements OnInit {
-  @Input() type = '';
   @Input() digit = '';
 
   @Output() digitEmitter = new EventEmitter<string>();

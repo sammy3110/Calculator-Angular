@@ -6,7 +6,6 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
-import { Event } from '@angular/router';
 import { EqualComponent, EqualData } from '../equal/equal.component';
 
 @Component({
@@ -23,6 +22,8 @@ export class DarkComponent implements OnInit {
 
   @Output() darkOpEmitter = new EventEmitter<string>();
   @Output() darkDigitEmitter = new EventEmitter<string>();
+  @Output() darkSignEmitter = new EventEmitter<string>();
+  @Output() darkClearScreenEmitter = new EventEmitter<string>();
   @Output() darkEqualDataEmitter = new EventEmitter<EqualData>();
 
   @ViewChild(EqualComponent)
@@ -42,6 +43,12 @@ export class DarkComponent implements OnInit {
 
   equalClicked(e: EqualData) {
     this.darkEqualDataEmitter.emit(e);
+  }
+  signChanged(e: string) {
+    this.darkSignEmitter.emit(e);
+  }
+  clearScreen(e: string) {
+    this.darkClearScreenEmitter.emit(e);
   }
 
   callEqual(op: string) {

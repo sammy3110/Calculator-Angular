@@ -8,102 +8,84 @@
     <div class="buttons">
       <div class="row">
         <app-operator
-          [type]="'light'"
-          (operatorEmitter)="operatorClicked($event)"
+          (operatorEmitter)="clearScreen($event)"
           [operator]="'C'"
         ></app-operator>
         <app-operator
-          [type]="'light'"
-          (operatorEmitter)="operatorClicked($event)"
+          (operatorEmitter)="signChanged($event)"
           [operator]="'+/-'"
         ></app-operator>
 
         <app-operator
-          [type]="'light'"
           (operatorEmitter)="operatorClicked($event)"
           [operator]="'%'"
         ></app-operator>
         <app-operator
-          [type]="'light'"
           (operatorEmitter)="operatorClicked($event)"
           [operator]="'/'"
         ></app-operator>
       </div>
       <div class="row">
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'7'"
         ></app-digit>
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'8'"
         ></app-digit>
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'9'"
         ></app-digit>
         <app-operator
-          [type]="'light'"
           (operatorEmitter)="operatorClicked($event)"
           [operator]="'X'"
         ></app-operator>
       </div>
       <div class="row">
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'4'"
         ></app-digit>
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'5'"
         ></app-digit>
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'6'"
         ></app-digit>
 
         <app-operator
-          [type]="'light'"
           (operatorEmitter)="operatorClicked($event)"
           [operator]="'-'"
         ></app-operator>
       </div>
       <div class="row">
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'1'"
         ></app-digit>
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'2'"
         ></app-digit>
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'3'"
         ></app-digit>
         <app-operator
-          [type]="'light'"
           (operatorEmitter)="operatorClicked($event)"
           [operator]="'+'"
         ></app-operator>
       </div>
       <div class="row">
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'0'"
         ></app-digit>
         <app-digit
-          [type]="'light'"
           (digitEmitter)="digitClicked($event)"
           [digit]="'.'"
         ></app-digit>

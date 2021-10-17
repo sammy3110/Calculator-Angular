@@ -44,8 +44,7 @@ body {
 
   height: 100%;
 
-  /* overflow: hidden; */
-  transition: 0.7s;
+  overflow: hidden;
   background: white;
 }
 .buttons {
@@ -80,7 +79,6 @@ body {
   width: 18rem;
   text-align: end;
   padding: 0 10px 0 10px;
-  transition: 0.5s;
 }
 
 .label {
@@ -141,51 +139,50 @@ body {
 .upper-dark {
   background-color: rgb(33, 43, 65);
 }
-.btn-dark {
+.cal-dark app-operator button {
   background-color: rgb(33, 43, 65);
   color: rgb(24, 212, 163);
 }
-.btn-dark:hover {
+.cal-dark app-operator button:hover {
   background-color: rgb(22, 28, 43);
 }
 .space-dark {
   background-color: rgb(46, 57, 81);
 }
-.btn-normal-dark {
-  background-color: rgb(46, 57, 81);
-  color: antiquewhite;
-}
-.btn-normal-dark:hover {
-  background-color: rgb(38, 47, 66) !important;
-}
 
 .light {
   background-color: beige;
 }
-.btn-light {
+.cal-light app-operator button {
   background-color: rgb(228, 252, 246);
-  transition: 0.7s;
 }
 
-.btn-light:hover {
+.cal-light app-operator button:hover {
   background-color: rgb(184, 241, 227);
 }
 
 .upper-light {
   background-color: rgb(228, 252, 246);
-  transition: 0.7s;
 }
 
-.btn-normal-light,
+.cal-light app-digit button,
 .space-light {
   background-color: white;
-  transition: 0.7s;
 }
 
-.btn-normal-light:hover {
+.cal-light app-digit button:hover {
   background-color: rgb(247, 247, 247);
 }
 
 .fasDark {
   color: rgb(24, 212, 163);
+}
+
+.cal-dark app-digit button {
+  background-color: rgb(46, 57, 81);
+  color: antiquewhite;
+}
+
+.cal-dark app-digit button:hover {
+  background-color: rgb(38, 47, 66) !important;
 }

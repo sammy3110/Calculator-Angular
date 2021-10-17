@@ -6,7 +6,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./operator.component.css'],
 })
 export class OperatorComponent implements OnInit {
-  @Input() type = '';
   @Input() operator = '0';
 
   @Output() operatorEmitter = new EventEmitter<string>();

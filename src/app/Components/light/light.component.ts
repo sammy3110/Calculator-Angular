@@ -23,6 +23,8 @@ export class LightComponent implements OnInit {
 
   @Output() lightOpEmitter = new EventEmitter<string>();
   @Output() lightDigitEmitter = new EventEmitter<string>();
+  @Output() lightSignEmitter = new EventEmitter<string>();
+  @Output() lightClearScreenEmitter = new EventEmitter<string>();
   @Output() lightEqualDataEmitter = new EventEmitter<EqualData>();
 
   @ViewChild(EqualComponent)
@@ -41,6 +43,12 @@ export class LightComponent implements OnInit {
 
   equalClicked(e: EqualData) {
     this.lightEqualDataEmitter.emit(e);
+  }
+  signChanged(e: string) {
+    this.lightSignEmitter.emit(e);
+  }
+  clearScreen(e: string) {
+    this.lightClearScreenEmitter.emit(e);
   }
 
   callEqual(op: string, firstOperand: number) {
